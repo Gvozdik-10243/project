@@ -1,18 +1,10 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <headerTop/>
+  <MenuTop/>
+  <router-view/>
+  <footerTop/>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
 
 <style>
 #app {
@@ -20,7 +12,33 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: #1d75ce;
+}
+
+nav {
+  padding: 30px;
+}
+
+nav a {
+  font-weight: bold;
+  color: #ca1f1f;
+}
+
+nav a.router-link-exact-active {
+  color: #062a1a;
 }
 </style>
+
+
+<script>
+import MenuTop from "@/components/templates/MenuTop";
+import headerTop from "@/components/templates/headerTop";
+import footerTop from "@/components/templates/footerTop";
+export default{
+  components:{
+    MenuTop,
+    headerTop,
+    footerTop
+  }
+}
+</script>
